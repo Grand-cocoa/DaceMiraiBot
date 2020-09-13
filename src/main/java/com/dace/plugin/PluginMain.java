@@ -23,6 +23,7 @@ public class PluginMain extends PluginBase {
 		List<FunctionBase> functionList = FunctionUtil.loadFunctionList(path + "/functionList.json");
 		getEventListener().subscribeAlways(MessageEvent.class, event -> {
 			String message = event.getMessage().contentToString();
+			System.out.println("[info][DaceMiraiBot]接收消息：" + message);
 			if (functionList != null) {
 				for (FunctionBase functionBase :
 						functionList) {
@@ -47,16 +48,20 @@ public class PluginMain extends PluginBase {
 								map.put("sendId", event.getSender().getId() + "");
 								map.put("sendName", event.getSenderName());
 								try {
-									event.getSubject().sendMessage(
-											MiraiCode.parseMiraiCode(
-													method.invoke(function, map).toString()
-											)
-									);
+									Object ret = method.invoke(function, map);
+									if (ret != null) {
+										String s = ret.toString();
+										if (!"".equals(s))
+											event.getSubject().sendMessage(
+												MiraiCode.parseMiraiCode(ret.toString())
+										);
+									}
 								} catch (IllegalAccessException | InvocationTargetException e) {
 									e.printStackTrace();
 								}
 							}
 						}
+						break;
 					}
 				}
 			}

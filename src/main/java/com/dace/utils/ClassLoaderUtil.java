@@ -40,7 +40,7 @@ public class ClassLoaderUtil extends ClassLoader {
 	private byte[] getClassByte(String name) throws IOException {
 
 		String classFile = classPath + File.separator + name.replace(".", File.separator) + ".class";
-		System.out.println(classFile);
+		System.out.println("[info][DaceMiraiBot]加载功能：" + classFile);
 
 		File file = new File(classFile);
 
