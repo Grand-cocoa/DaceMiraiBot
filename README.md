@@ -19,7 +19,7 @@ class FunctionBase {
 
 其中functionName为全名  举例"com.dace.base.FunctionBase"
 json举例
-```JSON
+```Json
 [
   {
     functionName : "com.help.AllHelp",
