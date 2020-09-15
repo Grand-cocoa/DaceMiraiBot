@@ -23,10 +23,11 @@ json举例
 [
   {
     functionName : "com.help.AllHelp",
-    functionKey : "^help .*"
+    functionKey : "^help.*"
   }, 
   {
-    ...
+    functionName : "com.util.AtAll",
+    functionKey : "atall"
   }
 ]
 ```
