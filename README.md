@@ -8,6 +8,10 @@
 通过Map将用到的信息进行传递，目前代码仅包括消息本身、发送者QQ、发送者昵称\群名片。
 
 # 关于json
+json名为functionList.json，位于插件文件夹中
+
+    Mirai\plugins\DaceMiraiBot\functionList.json
+
 json结构为[FunctionBase](https://github.com/Grand-cocoa/DaceMiraiBot/blob/master/src/main/java/com/dace/base/FunctionBase.java "com.dace.base.FunctionBase")的集合
 
 ```Java
