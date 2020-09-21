@@ -22,7 +22,8 @@ public class PluginMain extends PluginBase {
 		getLogger().info("插件已加载 ---- DaceMiraiBot\n" + info());
 		List<FunctionBase> functionList = FunctionUtil.loadFunctionList(path + "/functionList.json");
 		getEventListener().subscribeAlways(MessageEvent.class, event -> {
-			String message = event.getMessage().contentToString();
+			String message = event.getMessage().toString();
+			message = message.split("(?:\\[mirai:source:(.*?)?])")[1];
 			System.out.println("[info][DaceMiraiBot]接收消息：" + message);
 			if (functionList != null) {
 				for (FunctionBase functionBase :
