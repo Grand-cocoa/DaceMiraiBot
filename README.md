@@ -13,13 +13,34 @@
     
     Map（主消息key为"message"）,目前支持图片，使用[image]替换图片位置，在key为"image"中添加File、URL或其List
         注意：若list中对象过多会舍弃多余对象
+        
+# 关于自动回复
+使用json进行存储，位于插件文件夹中
 
-# 关于json
+    Mirai\plugins\DaceMiraiBot\Reply.json
+    
+json结构为Map<String, List<String>>
+
+json举例：
+```json
+{
+    "纸片人":[
+        "真的有人喜欢那东西吗，好蠢哦",
+        "噫！好宅哦"
+    ],
+    "@一般路过鲮鱼子":[
+        "at？"
+    ]
+}
+```
+
+# 关于功能json
 json名为functionList.json，位于插件文件夹中
 
     Mirai\plugins\DaceMiraiBot\functionList.json
 
 json结构为[FunctionBase](https://github.com/Grand-cocoa/DaceMiraiBot/blob/master/src/main/java/com/dace/base/FunctionBase.java "com.dace.base.FunctionBase")的集合
+
 
 ```Java
 class FunctionBase { 
