@@ -7,6 +7,13 @@
 # 主插件与功能的通信
 通过Map将用到的信息进行传递，目前代码仅包括消息本身、发送者QQ、发送者昵称\群名片。
 
+功能的返回值可以是:
+
+    String（只能进行简单的MiraiCode解析）
+    
+    Map（主消息key为"message"）,目前支持图片，使用[image]替换图片位置，在key为"image"中添加File、URL或其List
+        注意：若list中对象过多会舍弃多余对象
+
 # 关于json
 json名为functionList.json，位于插件文件夹中
 
