@@ -8,6 +8,15 @@ import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 public class FunctionUtil {
+
+	public static long lastTime(String path) throws IOException {
+		File file = new File(path);
+		if (file.exists())
+			return file.lastModified();
+		else
+			return 0;
+	}
+
 	public static List<FunctionBase> loadFunctionList(String path){
 		File func = new File(path);
 		if (!func.exists()){

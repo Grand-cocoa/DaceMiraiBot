@@ -1,4 +1,6 @@
 com\dace\plugin\FunctionUtil.class
 com\dace\utils\ClassLoaderUtil.class
 com\dace\plugin\PluginMain.class
+com\dace\plugin\reply\ReplyFileUtil.class
+com\dace\plugin\reply\Reply.class
 com\dace\base\FunctionBase.class

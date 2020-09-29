@@ -24,17 +24,18 @@ class FunctionBase {
 其中functionName为全名  举例"com.dace.base.FunctionBase"
 
 json举例：
-
-    [
-      {
-        functionName : "com.help.AllHelp",
-        functionKey : "^help.*"
-      }, 
-      {
-        functionName : "autoReply.Add", 
-        functionKey : "^[!！]add .*[:：].*"
-      }
-    ]
+```json
+[
+  {
+    "functionName" : "com.help.AllHelp",
+    "functionKey" : "^help.*"
+  }, 
+  {
+    "functionName" : "autoReply.Add", 
+    "functionKey" : "^[!！]add .*[:：].*"
+  }
+]
+```
 
 
 json和功能类都将从插件的文件夹中读取

@@ -6,6 +6,6 @@ author: "Dace"
 # main: 你的主类名字, 需要继承 PluginBase
 main: "com.dace.plugin.PluginMain"
 # version: 插件版本
-version: "1.0"
+version: "1.1"
 # info: 一句显示, 用处未知
 info: "This is Dace's bot"
