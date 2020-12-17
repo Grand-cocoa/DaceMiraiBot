@@ -1,6 +1,10 @@
 package com.dace.base;
 
+/**
+ * @author Kane
+ */
 public class FunctionBase {
+
 	private String functionName;
 	private String functionKey;
 

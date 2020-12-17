@@ -8,6 +8,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * @author Kane
+ */
 @SuppressWarnings("unchecked")
 public class ReplyFileUtil {
 	public static final String path =

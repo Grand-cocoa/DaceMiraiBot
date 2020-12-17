@@ -7,6 +7,9 @@ import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 
+/**
+ * @author Kane
+ */
 public class FunctionUtil {
 
 	public static long lastTime(String path) throws IOException {

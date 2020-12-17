@@ -6,6 +6,9 @@ import java.util.Map;
 import java.util.Random;
 import java.util.Set;
 
+/**
+ * @author Kane
+ */
 public class Reply {
 	private long lastModified;
 	private Map<String, List<String>> replyBases;
@@ -15,20 +18,30 @@ public class Reply {
 	}
 
 	public static Reply getBase(){
-		if (reply == null)
+		if (reply == null) {
 			reply = new Reply();
+		}
 		return reply;
 	}
 
 	public String run(String message) {
-		long l = ReplyFileUtil.getLastModified();
-		if (l > lastModified){
+		if (replyBases == null){
 			try {
 				replyBases = ReplyFileUtil.readerFileData();
 			} catch (IOException e) {
-				return "IOException:" + e.toString();
+				e.printStackTrace();
 			}
-			lastModified = l;
+			lastModified = ReplyFileUtil.getLastModified();
+		}else {
+			long l = ReplyFileUtil.getLastModified();
+			if (l > lastModified) {
+				try {
+					replyBases = ReplyFileUtil.readerFileData();
+				} catch (IOException e) {
+					return "IOException:" + e.toString();
+				}
+				lastModified = l;
+			}
 		}
 		assert replyBases != null;
 		Set<String> strings = replyBases.keySet();

@@ -9,6 +9,9 @@ import java.nio.channels.Channels;
 import java.nio.channels.FileChannel;
 import java.nio.channels.WritableByteChannel;
 
+/**
+ * @author Kane
+ */
 public class ClassLoaderUtil extends ClassLoader {
 
 	private final String classPath;
